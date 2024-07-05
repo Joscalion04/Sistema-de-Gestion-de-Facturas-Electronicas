@@ -43,7 +43,7 @@ Para ejecutar este proyecto localmente, sigue estos pasos:
    
 6. **Acceder a la Aplicación**
   Una vez que el backend y el frontend estén en ejecución, abre tu navegador web.
-  Visita http://localhost:3000 para interactuar con la aplicación web.
+  Visita http://localhost:8080 para interactuar con la aplicación web.
 
 **Notas**
 Asegúrate de tener configurado y ejecutando correctamente tanto el backend como el frontend para el funcionamiento completo de la aplicación.
