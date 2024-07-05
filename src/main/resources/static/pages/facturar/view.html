@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facturar</title>
+
+    <!-- LOCAL LINK PARA ESTILOS -->
+    <link rel="stylesheet" href="/css/facturar-styles.css">
+    <link rel="icon" href="/img/favicon.jpg">
+
+    <!-- LOCAL LINK PARA SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/menu.js"></script>
+    <script src="/js/errorsPopUps.js"></script>
+    <script src="controller.js"></script>
+
+    <!-- WEB LINK PARA ICONOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<header class="header" id="menu"></header>
+<div class="home">
+    <div class="form-model">
+        <div class="form-receptors">
+            <form>
+                <h2 for="buscar">BUSCAR CLIENTE </h2>
+                <input type="text" name="cliente" id="buscar-cliente-facturar" placeholder="" required>
+                <input type="submit" value="Agregar" id="boton-buscarCliente-facturar">
+            </form>
+            <form>
+                <h2 for="buscar">BUSCAR PRODUCTO</h2>
+                <input type="text" name="producto" id="buscar-producto-facturar" placeholder="" required>
+                <input type="submit" value="Agregar" id="boton-buscarProducto-facturar">
+            </form>
+        </div>
+        <main class="table">
+            <h1> GENERAR FACTURA</h1>
+            <section class="table_header">
+                <h1 id="cliente-facturar">Cliente: </h1>
+            </section>
+            <section class="table_body">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>CANT</th>
+                        <th>DESCRIPCION</th>
+                        <th>PRECIO</th>
+                        <th>MONTO</th>
+                        <th>...</th>
+                    </tr>
+                    </thead>
+                    <tbody id="table-carritoCompras">
+                    </tbody>
+                </table>
+                <section class="table_footer">
+                    <h1 id="total-facturar">TOTAL: </h1>
+                </section>
+                <form>
+                    <button id="boton-facturar-carritoCompras" class="facturar-botton" type="submit">
+                        <i class="fa-solid fa-file-import"></i>
+                    </button>
+                </form>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <h1>&copy; 2024 Portal de Facturacion Electronica </h1>
+    </footer>
+</div>
+</body>
+</html>
