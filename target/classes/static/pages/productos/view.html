@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <!-- LOCAL LINK PARA ESTILOS -->
+    <link rel="stylesheet" href="/css/productos-styles.css">
+
+    <!-- WEB LINK PARA ICONOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="icon" href="/img/favicon.jpg">
+
+    <!-- LOCAL LINK PARA SCRIPTS -->
+    <script src="/js/menu.js"></script>
+    <script src="controller.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/errorsPopUps.js"></script>
+
+</head>
+
+<body>
+<header class="header" id="menu"></header>
+<div class="home">
+    <div class="form-model">
+        <form action="/buscar" method="get">
+            <h2 for="buscar">BUSCAR PRODUCTO</h2>
+            <input type="text" id="buscar-producto-search" placeholder="Código">
+            <input type="submit" value="Buscar" id="buscar-producto">
+            <input type="submit" value="Limpiar" id="limpiar-producto">
+        </form>
+        <div class="register-box">
+            <form class="registrar-cliente">
+                <h2> REGISTRAR PRODUCTO </h2>
+                <div class="input-box">
+                    <input type="hidden" id="codigo" class="input-field">
+                    <i class="bx bx-user icon"></i>
+                </div>
+                <div class="input-box">
+                    <label for="descripcion" class="label">Nombre</label>
+                    <input type="text" id="descripcion" class="input-field" required>
+                    <i class="bx bx-user icon"></i>
+                </div>
+                <div class="input-box">
+                    <label for="precio" class="label">Precio</label><br>
+                    <input type="text" id="precio" class="input-field" required>
+                    <i class="bx bx-user icon"></i>
+                </div>
+                <div class="input-box">
+                    <br><br><br><br>
+                    <input type="submit" class="input-submit" id="input-button" value="REGISTRAR">
+                </div>
+            </form>
+        </div>
+    </div>
+    <main class="table">
+        <section class="table_header">
+            <h1>PRODUCTOS REGISTRADOS</h1>
+        </section>
+        <section class="table_body">
+            <table>
+                <thead>
+                <tr>
+                    <th>CODIGO</th>
+                    <th>DESCRIPCION</th>
+                    <th>PRECIO</th>
+                    <th>...</th>
+                </tr>
+                </thead>
+                <tbody id="list"></tbody>
+            </table>
+        </section>
+    </main>
+</div>
+<footer>
+    <h1>&copy; 2024 Portal de Facturacion Electronica </h1>
+</footer>
+</body>
+
+</html>

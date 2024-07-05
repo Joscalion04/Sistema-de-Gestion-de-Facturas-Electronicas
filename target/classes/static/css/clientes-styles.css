@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+    font-size: 62.5%;
+    font-size: 10px;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 175px;
+    position: fixed;
+    line-height: 175px;
+    text-align: center;
+}
+
+.nav div.logo {
+    float: left;
+    width: auto;
+    height: auto;
+    padding-left: 3rem;
+}
+
+.nav div.main_list {
+    height: 65px;
+    float: right;
+}
+
+.nav div.main_list ul {
+    width: 100%;
+    height: 175px;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 20;
+}
+
+.nav div.main_list ul li {
+    width: auto;
+    height: 175px;
+    padding: 0;
+    padding-right: 3rem;
+}
+
+.nav div.main_list ul li a {
+    text-decoration: none;
+    color: #fff;
+    line-height: 175px;
+    font-size: 2.4rem;
+}
+
+.nav div.main_list ul li a:hover {
+    color: #007bff;
+}
+
+.nav {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    backdrop-filter: blur(10px);
+    background-color: rgba(23, 20, 20, 0.5);
+}
+
+.home {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/fondo.jpg");
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-model {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-model input[type="text"] {
+    width: 75%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.form-model input[disabled] {
+    width: 75%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    color: white;
+    border-radius: 3px;
+}
+
+.form-model input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.form-model input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.form-model form h2 {
+    color: white;
+    border-color: white;
+    border: 2px;
+    display: inline-block;
+    line-height: 40px;
+    vertical-align: middle;
+}
+
+.register-box {
+    margin-top: 20px;
+    align-items: center;
+}
+
+.register-box h2 {
+    color: white;
+}
+
+.register-box form div {
+    align-items: center;
+}
+
+.register-box form div label {
+    color: white;
+    margin: 20px;
+    margin-bottom: 10px;
+    font-size: 23px;
+}
+
+.registrar-cliente {
+    align-items: center;
+}
+
+.table {
+    background-color: transparent;
+    /* Fondo transparente */
+    color: white;
+    padding: 20px;
+    opacity: 0.9;
+    /* Opacidad ajustable */
+    max-height: 300px; /* Altura máxima del scrollpane */
+    overflow: auto; /* Habilita la barra de desplazamiento si es necesario */
+}
+
+.table_header {
+    border: 2px solid rgb(165, 156, 156);
+    /* Añadir borde blanco al encabezado */
+    margin-bottom: 20px;
+    /* Añadir margen inferior al encabezado */
+}
+
+.table_header h1 {
+    text-align: center;
+    font-size: 24px;
+    /* Aumentar el tamaño de la letra del encabezado */
+}
+
+.table_body table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table_body th,
+.table_body td {
+    padding: 15px;
+    /* Aumentar el padding de las celdas */
+    text-align: center;
+    font-size: 18px;
+    /* Aumentar el tamaño de la letra de las celdas */
+}
+
+.table_body th,
+td {
+    border: none
+}
+
+.table_body input[type="text"] {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+.table_body button {
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    border-radius: 15%;
+}
+
+.table_body button:hover {
+    background-color: #555;
+}
+
+.edit-button {
+    background-color: #0056b3;
+    color: white;
+}
+
+footer {
+    backdrop-filter: blur(10px);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer h1 {
+    color: #fff;
+}
+
+
+
+/* styles.css */
+.swal2-popup.swal2-dark {
+    background-color: #333;
+    color: #fff;
+}
+
+.swal2-title.swal2-dark {
+    color: #fff;
+}
+
+.swal2-content.swal2-dark {
+    color: #bbb;
+}
+
+.swal2-confirm.swal2-dark,
+.swal2-cancel.swal2-dark {
+    background-color: #444;
+    color: #fff;
+    border: 1px solid #555;
+}
+
+.swal2-confirm.swal2-dark:hover,
+.swal2-cancel.swal2-dark:hover {
+    background-color: #555;
+}

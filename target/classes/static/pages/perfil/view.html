@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+          integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Perfil</title>
+
+    <!-- LOCAL LINK PARA ESTILOS -->
+    <link rel="icon" href="/img/favicon.jpg">
+    <link rel="stylesheet" href="/css/user-styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="/js/errorsPopUps.js"></script>
+
+    <script src="/js/menu.js"></script>
+    <script src="controller.js"></script>
+
+    <!-- WEB LINK PARA ICONOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+    <header class="header" id="menu"></header>
+    <section class="home">
+        <div class="contenido-banner" id="datos_perfil_usuario">
+        </div>
+        <div class="contenido-banner-info">
+            <h1 text="'Total de Facturas: ' + ${totalFacturas}"></h1>
+            <h1> Facturas</h1>
+            <table class="simple-table">
+                <thead>
+                    <tr>
+                        <th>IDENTIFICADOR</th>
+                        <th>FECHA DE EMISIÓN</th>
+                        <th>TOTAL</th>
+                    </tr>
+                </thead>
+                <tbody id="invoices_list"></tbody>
+            </table>
+        </div>
+        <div class="contenido-banner-info">
+            <h1> Un cliente aleatorio (porque si) </h1>
+            <table class="simple-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>NOMBRE</th>
+                        <th>CORREO</th>
+                    </tr>
+                </thead>
+                <tbody id="ultimo_cliente"></tbody>
+            </table>
+        </div>
+    </section>
+
+    <!--overly-->
+    <div id="itemoverlay" class="itemoverlay"></div>
+
+    <!--item-->
+    <div id="itemview" class='itemview'>
+        <div class="table">
+            <section class="table_header">
+                <h1>Actualizar datos</h1>
+            </section>
+            <section class="table_body">
+                <form>
+                    <input type="hidden" id="edit_user_id">
+                    <div class="input-box">
+                        <label for="edit_user_name" class="label">Nombre</label>
+                        <i class="bx bx-user icon"></i>
+                        <input type="text" id="edit_user_name" name="nombre" class="input-field">
+                    </div>
+                    <div class="input-box">
+                        <label for="edit_user_email" class="label">Correo</label>
+                        <i class="bx bx-message icon"></i>
+                        <input type="text" id="edit_user_email" name="correo" class="input-field">
+                    </div>
+                    <div class="input-box">
+                        <label for="edit_user_phone" class="label">Telefono</label>
+                        <i class="bx bx-phone icon"></i>
+                        <input type="text" id="edit_user_phone" name="telefono" class="input-field">
+                    </div>
+
+                </form>
+                <div class="input-box">
+                    <input type="submit" class="input-submit" value="Actualizar datos" id="updateButtom">
+                    <input type="submit" class="input-submit" value="Cancelar" id="cancelButtom">
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        <h1>&copy; 2024 Portal de Facturacion Electronica </h1>
+    </footer>
+</body>
+
+</html>

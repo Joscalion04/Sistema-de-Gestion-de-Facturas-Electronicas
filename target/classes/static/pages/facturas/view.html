@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facturas</title>
+    <!-- LOCAL LINK PARA ESTILOS -->
+    <link rel="icon" href="/img/favicon.jpg">
+    <link rel="stylesheet" href="/css/facturas-styles.css">
+
+    <!-- LOCAL LINK PARA SCRIPTS -->
+    <script src="/js/menu.js"></script>
+    <script src="controller.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/errorsPopUps.js"></script>
+
+    <!-- WEB LINK PARA ICONOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+    <header class="header" id="menu"></header>
+    <div class="home">
+        <div class="form-model">
+            <form method="get">
+                <h2 for="buscar-factura">BUSCAR FACTURA </h2>
+                <input type="text" id="buscar-factura" required>
+                <input type="submit" value="Buscar" id="buscar-factura-search">
+                <input type="button" value="Limpiar" id="limpiar-factura">
+            </form>
+            <main class="table">
+                <section class="table_header">
+                    <h1>FACTURAS REGISTRADAS</h1>
+                </section>
+                <section class="table_body">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>IDENTIFICADOR</th>
+                                <th>FECHA DE EMISION</th>
+                                <th>TOTAL</th>
+                                <th>PDF</th>
+                                <th>XML</th>
+                            </tr>
+                        </thead>
+                        <tbody id="facturas-list">
+                        </tbody>
+                    </table>
+                </section>
+            </main>
+        </div>
+        <footer>
+            <h1>&copy; 2024 Portal de Facturacion Electronica </h1>
+        </footer>
+    </div>
+</body>
+
+</html>

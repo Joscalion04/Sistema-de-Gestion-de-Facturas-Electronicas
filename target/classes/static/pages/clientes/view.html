@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes</title>
+    <!-- LOCAL LINK PARA ESTILOS -->
+    <link rel="stylesheet" href="/css/clientes-styles.css">
+    <!-- WEB LINK PARA ICONOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="icon" href="/img/favicon.jpg">
+    <!-- LOCAL LINK PARA SCRIPTS -->
+    <script src="/js/menu.js"></script>
+    <script src="controller.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/errorsPopUps.js"></script>
+
+</head>
+<body>
+    <header class="header" id="menu"></header>
+<div class="home">
+    <div class="form-model">
+        <form method="get" action="/clientes/buscar">
+            <h2 for="buscar">BUSCAR CLIENTE</h2>
+            <input type="text" id="identificacion-cliente-search" placeholder="" name="identificacion">
+            <input type="submit" value="Buscar" id="buscar-cliente">
+        </form>
+        <div class="register-box">
+            <form>
+                <h2> REGISTRAR CLIENTE </h2>
+                <div class="input-box">
+                    <label for="nombre-completo" class="label">Nombre completo</label>
+                    <input type="text" id="nombre-completo" class="input-field" name="nombre" required>
+                    <i class="bx bx-user icon"></i>
+                </div>
+                <div class="input-box">
+                    <label for="idF" class="label">Identificacion</label>
+                    <input type="text" id="idF" class="input-field" name="identificacion" required>
+                    <i class="bx bx-user icon"></i>
+                </div>
+                <div class="input-box">
+                    <label for="telefono" class="label">Telefono</label>
+                    <input type="text" id="telefono" class="input-field" name="telefono" required>
+                    <i class="bx bx-user icon"></i>
+                </div>
+                <div class="input-box">
+                    <label for="correo" class="label">Correo</label>
+                    <input type="text" id="correo" class="input-field" name="correo" required>
+                    <i class="bx bx-user icon"></i>
+                </div>
+                <div class="input-box">
+                    <input type="submit" class="input-submit" value="REGISTRAR" id="registrar-cliente">
+                </div>
+            </form>
+            <div class="input-box" style="margin: 10px">
+                <input type="submit" class="input-submit" value="LIMPIAR" id="limpiar-cliente">
+            </div>
+        </div>
+    </div>
+    <main class="table">
+        <section class="table_header">
+            <h1>CLIENTES REGISTRADOS</h1>
+        </section>
+        <section class="table_body">
+            <table>
+                <thead>
+                <tr>
+                    <th>IDENTIFICACION</th>
+                    <th>NOMBRE</th>
+                    <th>CORREO</th>
+                    <th>TELEFONO</th>
+                    <th>...</th>
+                </tr>
+                </thead>
+                <tbody id="table-clientes">
+                </tbody>
+            </table>
+        </section>
+    </main>
+</div>
+<footer>
+    <h1>&copy; 2024 Portal de Facturacion Electronica </h1>
+</footer>
+</body>
+</html>

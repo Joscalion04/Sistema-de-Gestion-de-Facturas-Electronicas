@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>VISTA: Administrador</title>
+    <!-- LOCAL LINK PARA ESTILOS -->
+    <link rel="stylesheet" href="/css/admin-styles.css">
+    <link rel="icon" href="/img/favicon.jpg">
+
+    <!-- LOCAL LINK PARA SCRIPTS -->
+    <script src="/js/menu.js"></script>
+    <script src="controller.js"></script>
+    <script src="/js/errorsPopUps.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- WEB LINK PARA ICONOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="container">
+            <div class="logo">
+                <img src="/img/logo.png" alt="LOGO">
+            </div>
+            <div id="mainListDiv" class="main_list">
+                <h1>Página de administrador</h1>
+            </div>
+        </div>
+    </nav>
+    <section class="home">
+        <div class="contenido-banner" id="info-admin"></div>
+        <div class="contenido-banner-info">
+            <h1>Proveedores </h1>
+            <table class="simple-table">
+                <thead>
+                <tr>
+                    <th>IDENTIFICACION</th>
+                    <th>ESTADO</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody id="providers_list"></tbody>
+            </table>
+        </div>
+    </section>
+    <footer>
+        <h1>&copy; 2024 Portal de Facturacion Electronica </h1>
+    </footer>
+</body>
+
+</html>
